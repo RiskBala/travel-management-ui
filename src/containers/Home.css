@@ -1,0 +1,16 @@
+.table {
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.wlc {
+    padding: 60px 0;
+    margin-left: 10%;
+  }
+
+.navbar-header {
+    float: left;
+    font-weight: bold;
+}

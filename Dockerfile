@@ -18,4 +18,5 @@ COPY . /app
 EXPOSE 3000
 
 # start app
+CMD ["npm", "build"] 
 CMD ["npm", "start"] --host 0.0.0.0 --disable-host-check

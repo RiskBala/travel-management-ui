@@ -19,7 +19,7 @@ export default class Home extends Component {
     componentDidMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:8762/trip-summary/trip',
+            url: 'http://http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com:8762/trip-summary/trip',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken

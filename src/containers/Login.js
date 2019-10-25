@@ -38,7 +38,7 @@ export default class Login extends Component {
     // console.log(body);
     axios({
       method: 'post',
-      url: 'http://http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com:8762/oauth/token',
+      url: 'http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com:8762/oauth/token',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Basic '+btoa("client:secret")

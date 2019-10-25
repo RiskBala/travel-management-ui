@@ -2,16 +2,17 @@
 FROM node:latest
 
 #Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package.json /usr/src/app/
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+COPY package.json /app/package.json
 
 RUN npm install
 
-ADD src /usr/src/app/src
-ADD public /usr/src/app/public
+COPY . /app
 
 RUN npm build
 
-CMD [ "npm", "start "]
+CMD [ "npm", "start"]

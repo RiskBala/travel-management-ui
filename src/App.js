@@ -14,7 +14,7 @@ class App extends Component {
       isAuthenticated: false,
       isAuthenticating: true
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
   
   userHasAuthenticated = authenticated => {
@@ -50,7 +50,9 @@ class App extends Component {
             <Navbar.Collapse>
               <Nav pullRight>
                 {this.state.isAuthenticated
-                  ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                  ?<LinkContainer to="/logout">
+                      <NavItem>Logout</NavItem>
+                    </LinkContainer>
                   : <Fragment>
                     <LinkContainer to="/signup">
                       <NavItem>Signup</NavItem>
